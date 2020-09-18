@@ -30,6 +30,10 @@ class Share < ApplicationRecord
     parsed_json['html']
   end
 
+  def expired?
+    ((Time.current - created_at) / 1.hour) > 12
+  end
+
   private
 
   def set_uid

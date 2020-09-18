@@ -17,4 +17,10 @@ class ShareTest < ActiveSupport::TestCase
   test 'uid should be present' do
     assert @share.uid.present?
   end
+
+  test 'should expire' do
+    assert_not @share.expired?
+    @share.created_at = 13.hours.ago
+    assert @share.expired?
+  end
 end
