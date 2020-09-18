@@ -19,6 +19,7 @@ group :development, :test do
 end
 
 group :development do
+  gem 'haml_lint',             require: false
   gem 'listen',                '~> 3.2.0'
   gem 'rubocop',               require: false
   gem 'rubocop-rails',         require: false
