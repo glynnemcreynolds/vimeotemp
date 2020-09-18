@@ -1,6 +1,9 @@
 class Share < ApplicationRecord
   before_validation :set_uid
 
+  extend FriendlyId
+  friendly_id :uid, use: :slugged
+
   validates :video_code, presence: true
   validates :uid, presence: true, uniqueness: true, length: { is: 8 }
 

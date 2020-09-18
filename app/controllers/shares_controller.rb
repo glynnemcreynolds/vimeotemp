@@ -1,6 +1,6 @@
 class SharesController < ApplicationController
   def show
-    @share = Share.find(params[:id])
+    @share = Share.friendly.find(params[:id])
   end
 
   def new
