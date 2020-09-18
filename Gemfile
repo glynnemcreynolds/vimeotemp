@@ -3,17 +3,17 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.7.1'
 
-gem 'rails', '6.0.3.2' # Upgrade in yarn when upgrading
-gem 'puma', '~> 4.1'
-gem 'sass-rails', '~> 6.0'
-gem 'webpacker', '5.1.1' # Upgrade in yarn when upgrading
-gem 'turbolinks', '~> 5'
-gem 'jbuilder', '~> 2.7'
 gem 'bootsnap', '>= 1.4.2', require: false
+gem 'jbuilder', '~> 2.7'
+gem 'puma', '~> 4.1'
+gem 'rails', '6.0.3.2' # Upgrade in yarn when upgrading
+gem 'sass-rails', '~> 6.0'
+gem 'turbolinks', '~> 5'
+gem 'webpacker', '5.1.1' # Upgrade in yarn when upgrading
 
 group :development, :test do
+  gem 'byebug', platforms: %i[mri mingw x64_mingw]
   gem 'sqlite3', '~> 1.4'
-  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 end
 
 group :development do
@@ -27,9 +27,12 @@ end
 
 group :test do
   gem 'capybara',                 '~> 3.28'
+  gem 'minitest',                 '~> 5.11'
+  gem 'minitest-reporters',       '~> 1.3'
+  gem 'rails-controller-testing', '~> 1.0'
   gem 'selenium-webdriver',       '~> 3.142'
   gem 'webdrivers',               '~> 4.1'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]

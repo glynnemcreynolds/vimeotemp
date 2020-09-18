@@ -1,0 +1,29 @@
+require: rubocop-rails
+
+inherit_mode:
+  merge:
+    - Exclude
+
+AllCops:
+  Exclude:
+    - 'db/**/*'
+    - 'config/**/*'
+  NewCops: enable
+
+Layout/ExtraSpacing:
+  AllowForAlignment: true
+
+# Enable/disable cops
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Style/Documentation:
+  Enabled: false
+
+# Exclusions
+
+Style/ClassAndModuleChildren:
+  Exclude:
+    - 'test/channels/application_cable/connection_test.rb'
+    - 'test/test_helper.rb'
