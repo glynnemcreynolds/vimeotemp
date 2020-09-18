@@ -1,0 +1,9 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  video_code: 1234567
+  identifier: T6aGmDP2
+
+two:
+  video_code: 1234567
+  identifier: LAbHHf6z
