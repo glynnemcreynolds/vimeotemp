@@ -10,11 +10,11 @@ class Share < ApplicationRecord
   private
 
   def set_uid
-    self.uid = SecureRandom.alphanumeric(8)
+    uid = SecureRandom.alphanumeric(8)
     loop do
       uid = SecureRandom.alphanumeric(8)
-      break unless self.class.exists?(uid: uid)
+      break unless self.class.exists?(uid: uid.downcase)
     end
-    self.uid = uid
+    self.uid = uid.downcase
   end
 end
