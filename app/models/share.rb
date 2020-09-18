@@ -1,5 +1,5 @@
 class Share < ApplicationRecord
-  before_validation :set_uid
+  before_validation :set_uid, on: :create
 
   validates :video_code, presence: true
   validates :uid, presence: true, uniqueness: true, length: { is: 8 }
