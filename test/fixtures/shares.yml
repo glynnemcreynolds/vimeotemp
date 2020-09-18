@@ -3,7 +3,9 @@
 one:
   video_code: 1234567
   uid: T6aGmDP2
+  duration: 12
 
 two:
   video_code: 350958068
   uid: LAbHHf6z
+  duration: 12

@@ -12,9 +12,8 @@ class SharesCreateTest < ActionDispatch::IntegrationTest
 
   test 'valid share creation' do
     get new_share_path
-    video_code = '350958068'
     assert_difference 'Share.count', 1 do
-      post shares_path, params: { share: { video_code: video_code } }
+      post shares_path, params: { share: { video_code: '350958068', duration: 12 } }
     end
     follow_redirect!
     assert_template 'shares/show'

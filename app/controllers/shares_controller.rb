@@ -21,7 +21,7 @@ class SharesController < ApplicationController
 
   def share_params
     params.require(:share).permit(
-      :video_code
+      :video_code, :duration
     )
   end
 end

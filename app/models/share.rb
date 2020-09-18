@@ -3,6 +3,7 @@ class Share < ApplicationRecord
 
   validates :video_code, presence: true
   validates :uid, presence: true, uniqueness: true, length: { is: 8 }
+  validates :duration, presence: true
 
   def to_parm
     uid
