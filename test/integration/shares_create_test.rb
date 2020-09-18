@@ -12,13 +12,13 @@ class SharesCreateTest < ActionDispatch::IntegrationTest
 
   test 'valid share creation' do
     get new_share_path
-    video_code = '1234567'
+    video_code = '350958068'
     assert_difference 'Share.count', 1 do
       post shares_path, params: { share: { video_code: video_code } }
     end
     follow_redirect!
     assert_template 'shares/show'
     assert_not flash.empty?
-    assert_select 'p', video_code
+    assert_select 'iframe'
   end
 end

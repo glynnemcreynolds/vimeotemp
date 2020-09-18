@@ -9,7 +9,7 @@ class SharesControllerTest < ActionDispatch::IntegrationTest
     get share_path(@share.uid)
     assert_response :success
     assert_select 'title', full_title(@share.uid)
-    assert_select 'p', @share.video_code
+    assert_select 'iframe' if @share.valid_json?
   end
 
   test 'should get new' do

@@ -27,3 +27,7 @@ Style/ClassAndModuleChildren:
   Exclude:
     - 'test/channels/application_cable/connection_test.rb'
     - 'test/test_helper.rb'
+
+Style/DoubleNegation:
+  Exclude:
+    - 'app/models/share.rb'

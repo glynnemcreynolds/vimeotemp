@@ -8,6 +8,28 @@ class Share < ApplicationRecord
     uid
   end
 
+  def valid_json?
+    !!JSON.parse(
+      Net::HTTP.get(
+        URI("https://vimeo.com/api/oembed.json?url=https://vimeo.com/#{video_code}")
+      )
+    )
+  rescue JSON::ParserError
+    false
+  end
+
+  def parsed_json
+    JSON.parse(
+      Net::HTTP.get(
+        URI("https://vimeo.com/api/oembed.json?url=https://vimeo.com/#{video_code}")
+      )
+    )
+  end
+
+  def embed_code
+    parsed_json['html']
+  end
+
   private
 
   def set_uid

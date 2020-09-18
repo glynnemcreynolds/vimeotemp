@@ -1,2 +1,8 @@
 - provide(:title, @share.uid)
-%p= @share.video_code
+
+- if @share.valid_json?
+  = raw @share.embed_code
+- else
+  %p
+    This video is missing some data. Please contact the sender and ask them to
+    send again.
