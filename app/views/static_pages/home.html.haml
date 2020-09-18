@@ -1,3 +1,8 @@
-%h1 Home
-%p
-  Information about the app.
+%section.hero.is-primary.is-bold.is-fullheight
+  .hero-body
+    .container
+      %h1.title Vimeo Temp
+      %h2.subtitle Create a temporary shared embed of a Vimeo video.
+      = link_to 'New Share',
+        new_share_path,
+        class: 'button is-link is-large is-fullwidth'

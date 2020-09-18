@@ -1,3 +1,6 @@
 - unless flash.empty?
-  - flash.each do |message_type, message|
-    %div{ class: "notification is-#{message_type}" }= message
+  .container
+    - flash.each do |message_type, message|
+      %div{ class: "notification is-#{message_type}" }
+        %button.delete
+        = message

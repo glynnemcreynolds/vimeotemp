@@ -1,8 +1,16 @@
 - provide(:title, @share.uid)
 
 - if @share.valid_json?
-  = raw @share.embed_code
+  %section.hero.is-primary.is-bold.is-fullheight
+    .hero-body
+      .container
+        .video-container
+          = raw @share.embed_code
 - else
-  %p
-    This video is missing some data. Please contact the sender and ask them to
-    send again.
+  %section.hero.is-warning.is-bold.is-fullheight
+    .hero-body
+      .container
+        %h1.title Missing Data
+        %h2.subtitle
+          This video is missing some data. Please contact the sender and ask
+          them to send again.
