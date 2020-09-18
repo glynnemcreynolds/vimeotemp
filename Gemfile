@@ -10,7 +10,7 @@ gem 'puma',       '~> 4.1'
 gem 'rails',      '6.0.3.2' # Upgrade in yarn when upgrading
 gem 'sass-rails', '~> 6.0'
 gem 'turbolinks', '~> 5'
-gem 'webpacker',  '5.1.1' # Upgrade in yarn when upgrading
+gem 'webpacker',  '5.2.1' # Upgrade in yarn when upgrading
 
 group :development, :test do
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
