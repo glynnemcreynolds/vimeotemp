@@ -5,6 +5,7 @@ ruby '2.7.1'
 
 gem 'bootsnap',   '>= 1.4.2', require: false
 gem 'jbuilder',   '~> 2.7'
+gem 'pg',         '~> 1.2'
 gem 'puma',       '~> 4.1'
 gem 'rails',      '6.0.3.2' # Upgrade in yarn when upgrading
 gem 'sass-rails', '~> 6.0'
@@ -13,7 +14,6 @@ gem 'webpacker',  '5.1.1' # Upgrade in yarn when upgrading
 
 group :development, :test do
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
-  gem 'sqlite3', '~> 1.4'
 end
 
 group :development do
