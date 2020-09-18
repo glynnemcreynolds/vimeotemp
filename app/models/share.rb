@@ -32,7 +32,7 @@ class Share < ApplicationRecord
   end
 
   def expired?
-    ((Time.current - created_at) / 1.hour) > 12
+    ((Time.current - created_at) / 1.hour) > duration
   end
 
   private
