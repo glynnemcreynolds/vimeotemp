@@ -3,13 +3,13 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.7.1'
 
-gem 'bootsnap', '>= 1.4.2', require: false
-gem 'jbuilder', '~> 2.7'
-gem 'puma', '~> 4.1'
-gem 'rails', '6.0.3.2' # Upgrade in yarn when upgrading
+gem 'bootsnap',   '>= 1.4.2', require: false
+gem 'jbuilder',   '~> 2.7'
+gem 'puma',       '~> 4.1'
+gem 'rails',      '6.0.3.2' # Upgrade in yarn when upgrading
 gem 'sass-rails', '~> 6.0'
 gem 'turbolinks', '~> 5'
-gem 'webpacker', '5.1.1' # Upgrade in yarn when upgrading
+gem 'webpacker',  '5.1.1' # Upgrade in yarn when upgrading
 
 group :development, :test do
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
@@ -17,11 +17,11 @@ group :development, :test do
 end
 
 group :development do
-  gem 'listen',                 '~> 3.1.5'
-  gem 'rubocop',                require: false
-  gem 'rubocop-rails',          require: false
-  gem 'spring',                 '~> 2.1.0'
-  gem 'spring-watcher-listen',  '~> 2.0.1'
+  gem 'listen',                '~> 3.1.5'
+  gem 'rubocop',               require: false
+  gem 'rubocop-rails',         require: false
+  gem 'spring',                '~> 2.1.0'
+  gem 'spring-watcher-listen', '~> 2.0.1'
   gem 'web-console'
 end
 
