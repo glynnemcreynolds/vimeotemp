@@ -9,6 +9,7 @@ class SharesControllerTest < ActionDispatch::IntegrationTest
     get share_path(@share)
     assert_response :success
     assert_select 'title', full_title(@share.uid)
+    assert_select 'p', @share.video_code
   end
 
   test 'should get new' do
