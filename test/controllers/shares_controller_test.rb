@@ -6,7 +6,7 @@ class SharesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test 'should show share' do
-    get share_path(@share)
+    get share_path(@share.uid)
     assert_response :success
     assert_select 'title', full_title(@share.uid)
     assert_select 'p', @share.video_code

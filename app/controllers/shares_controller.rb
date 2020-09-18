@@ -1,6 +1,6 @@
 class SharesController < ApplicationController
   def show
-    @share = Share.friendly.find(params[:id])
+    @share = Share.find_by uid: params[:uid]
   end
 
   def new
@@ -11,7 +11,7 @@ class SharesController < ApplicationController
     @share = Share.new(share_params)
     if @share.save
       flash[:success] = 'New share successfully created!'
-      redirect_to @share
+      redirect_to share_path(@share.uid)
     else
       render 'new'
     end

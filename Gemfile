@@ -5,7 +5,6 @@ ruby '2.7.1'
 
 gem 'bootsnap',    '~> 1.4.0', require: false
 gem 'faker',       '~> 2.13.0'
-gem 'friendly_id', '~> 5.4.0'
 gem 'haml',        '~> 5.1.0'
 gem 'haml-rails',  '~> 2.0.0'
 gem 'jbuilder',    '~> 2.10.0'

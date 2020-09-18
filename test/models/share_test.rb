@@ -10,7 +10,7 @@ class ShareTest < ActiveSupport::TestCase
   end
 
   test 'video_code should be present' do
-    assert @share.video_code = '     '
+    @share.video_code = '     '
     assert_not @share.valid?
   end
 
