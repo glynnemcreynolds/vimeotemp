@@ -1,0 +1,8 @@
+= form_with(model: @share, local: true) do |form|
+
+  = render 'shared/error_messages', object: form.object
+
+  = form.label :video_code
+  = form.text_field :video_code
+
+  = form.submit 'Save'

@@ -17,10 +17,10 @@ ActiveRecord::Schema.define(version: 2020_09_18_135447) do
 
   create_table "shares", force: :cascade do |t|
     t.string "video_code", null: false
-    t.string "identifier", null: false
+    t.string "uid", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["identifier"], name: "index_shares_on_identifier", unique: true
+    t.index ["uid"], name: "index_shares_on_uid", unique: true
   end
 
 end

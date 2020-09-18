@@ -10,25 +10,11 @@ class ShareTest < ActiveSupport::TestCase
   end
 
   test 'video_code should be present' do
-    @share.video_code = '     '
+    assert @share.video_code = '     '
     assert_not @share.valid?
   end
 
-  test 'identifier should be present' do
-    @share.identifier = '     '
-    assert_not @share.valid?
-  end
-
-  test 'identifier should be unique' do
-    duplicate_share = @share.dup
-    @share.save
-    assert_not duplicate_share.valid?
-  end
-
-  test 'identifier should be 8 characters' do
-    @share.identifier = 'a' * 9
-    assert_not @share.valid?
-    @share.identifier = 'a' * 7
-    assert_not @share.valid?
+  test 'uid should be present' do
+    assert @share.uid.present?
   end
 end

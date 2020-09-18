@@ -8,6 +8,12 @@ class SharesControllerTest < ActionDispatch::IntegrationTest
   test 'should show share' do
     get share_path(@share)
     assert_response :success
-    assert_select 'title', full_title(@share.identifier)
+    assert_select 'title', full_title(@share.uid)
+  end
+
+  test 'should get new' do
+    get new_share_path
+    assert_response :success
+    assert_select 'title', full_title('New Share')
   end
 end
