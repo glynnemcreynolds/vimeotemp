@@ -1,6 +1,13 @@
 class SharesController < ApplicationController
   def show
     @share = Share.find_by uid: params[:uid]
+    if @share.expired?
+      @share.destroy!
+      flash[:danger] = 'Share has expired and has been deleted'
+      redirect_to expired_path
+    else
+      render 'show'
+    end
   end
 
   def new

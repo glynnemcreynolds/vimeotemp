@@ -12,4 +12,10 @@ class StaticPagesControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
     assert_select 'title', full_title('About')
   end
+
+  test 'should get expired' do
+    get expired_path
+    assert_response :success
+    assert_select 'title', full_title('Expired')
+  end
 end
