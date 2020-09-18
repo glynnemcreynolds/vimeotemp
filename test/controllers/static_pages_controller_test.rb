@@ -4,13 +4,13 @@ class StaticPagesControllerTest < ActionDispatch::IntegrationTest
   test 'should get root' do
     get root_path
     assert_response :success
-    assert_select 'title', full_title('About')
+    assert_select 'title', full_title
   end
 
-  test 'should get help' do
-    get about_path
+  test 'should get home' do
+    get home_path
     assert_response :success
-    assert_select 'title', full_title('About')
+    assert_select 'title', full_title
   end
 
   test 'should get expired' do
