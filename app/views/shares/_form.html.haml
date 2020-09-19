@@ -3,19 +3,24 @@
   = render 'shared/error_messages', object: form.object
 
   .field
-    .control
-      = form.label :video_code, class: 'label'
+    .control.has-icons-left
       = form.text_field :video_code,
         class: 'input is-large',
-        placeholder: 'eg. 123456789'
+        placeholder: 'Video code'
+      %span.icon.is-left
+        %ion-icon{ name: 'videocam' }
       %p.help Only enter the string of numbers from the Vimeo video URL.
 
   .field
-    .control
-      = form.label :duration, class: 'label'
+    .control.has-icons-left
       = form.number_field :duration,
         class: 'input is-large',
-        placeholder: 'eg. 12'
+        placeholder: 'Duration'
+      %span.icon.is-left
+        %ion-icon{ name: 'timer' }
       %p.help The number of hours you would like the video to be accessible for.
 
-  = form.submit 'Save', class: 'button is-link is-large'
+  = form.button name: 'commit', type: 'submit', class: 'button is-link is-large' do
+    %span.icon.is-large
+      %ion-icon{ name: 'add-circle' }
+    %span Save

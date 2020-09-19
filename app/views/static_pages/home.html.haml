@@ -3,6 +3,7 @@
     .container.has-text-centered
       %h1.title Vimeo Temp
       %h2.subtitle Create a temporary shared embed of a Vimeo video.
-      = link_to 'New Share',
-        new_share_path,
-        class: 'button is-link is-large'
+      = link_to new_share_path, class: 'button is-link is-large' do
+        %span.icon.is-large
+          %ion-icon{ name: 'add-circle' }
+        %span New Share
